@@ -11,6 +11,7 @@ import diningImage from "@/assets/category-dining.jpg";
 import officeImage from "@/assets/category-office.jpg";
 import outdoorImage from "@/assets/category-outdoor.jpg";
 import customImage from "@/assets/category-custom.jpg";
+import BackButton from "@/components/BackButton";
 
 interface Product {
 	id: number;
@@ -76,6 +77,9 @@ const Shop = () => {
 
 			<main className="py-12 md:py-16 bg-background">
 				<div className="container mx-auto px-4">
+					{/* Back Button */}
+					<BackButton />
+
 					{/* Header */}
 					<div className="mb-8 animate-fade-in">
 						<h1 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">

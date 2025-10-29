@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackButton from "@/components/BackButton";
 import { CheckCircle2 } from "lucide-react";
 import customImage from "@/assets/category-custom.jpg";
 
@@ -27,26 +28,25 @@ const About = () => {
   return (
     <div className="min-h-screen font-inter">
       <Header />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
-                About Sardar Furniture
-              </h1>
-              <p className="font-inter text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-                Your trusted partner for quality furniture in Dahiyawan, Uttar Pradesh. 
-                Where tradition meets modern design.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Story Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
+      <main className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          {/* Back Button */}
+          <BackButton />
+
+          {/* Header */}
+          <div className="mb-12 text-center animate-fade-in">
+            <h1 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
+              About Sardar Furniture
+            </h1>
+            <p className="font-inter text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+              Your trusted partner for quality furniture in Dahiyawan, Uttar Pradesh. 
+              Where tradition meets modern design.
+            </p>
+          </div>
+
+          {/* Story Section */}
+          <section className="py-16 md:py-24 bg-background">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
                 <img
@@ -79,12 +79,10 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-secondary/30">
-          <div className="container mx-auto px-4">
+          {/* Why Choose Us */}
+          <section className="py-16 md:py-24 bg-secondary/30">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Why Choose Sardar Furniture?
@@ -115,12 +113,10 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Mission */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
+          {/* Mission */}
+          <section className="py-16 md:py-24 bg-background">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Our Mission
@@ -135,8 +131,8 @@ const About = () => {
                 <p className="font-poppins text-2xl font-bold">Comfort. Craft. Class.</p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <Footer />

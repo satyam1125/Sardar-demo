@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Package, Truck, Shield } from "lucide-react";
 import livingImage from "@/assets/category-living.jpg";
+import BackButton from "@/components/BackButton";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -39,16 +40,11 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen font-inter">
       <Header />
-      
+
       <main className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           {/* Back Button */}
-          <Button asChild variant="ghost" className="mb-6">
-            <Link to="/shop">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Shop
-            </Link>
-          </Button>
+          <BackButton />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Image */}
